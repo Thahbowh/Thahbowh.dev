@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Portfolio Website | Thah.bowh</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  
+  <style>
+    /* Responsive Navbar Fix */
+    /* Desktop Navbar */
+    .navbar {
+      display: flex;
+      gap: 20px;
+    }
+    
+    /* Desktop: Hide menu icon */
+    #menu-icon {
+      display: none;
+    }
+    
+    /* Mobile Styling */
+    @media (max-width: 768px) {
+      #menu-icon {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+      
+      .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #081b29;
+        padding: 15px;
+        border-radius: 8px;
+      }
+      
+      /* Show menu when active */
+      .navbar.active {
+        display: flex;
+      }
+      
+      .navbar a {
+        padding: 10px 0;
+        color: white;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Head Design -->
+  <header class="header">
+    <a href="#" class="logo">ThahBowh.dev</a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contacts</a>
+    </nav>
+  </header>
+  
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <h3>Hello, it's me</h3>
+      <h1>Thabo Mosikidi</h1>
+      <h3>and I am a </h3>
+      <h1>Web Developer</h1>
+      <p>Junior Web Developer based in South Africa. I recently earned my Full Stack Development certificate through the
+        FNB App Academy and IT Varsity.</p>
+      <div class="social-media">
+        <a href="https://www.facebook.com/profile.php?id=100035818603296" target="_blank" rel="noopener" aria-label="Visit my Facebook profile">
+          <i class='bx bxl-facebook'></i>
+        </a>
+        <a href="https://wa.me/+27750918076" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+          <i class='bx bxl-whatsapp'></i>
+        </a>
+        <a href="https://www.instagram.com/thah.bowh?igsh=YzljYTk1ODg3Zg=="><i class='bx bxl-instagram-alt'></i></a>
+        <a href="#"><i class='bx bxl-linkedin'></i></a>
+        <div class="btn-box">
+          <a href="#services">Services</a>
+          <a href="https://wa.me/+27750918076" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">Let's Talk</a>
+        </div>
+        <div class="home-img">
+          <img src="#" alt="">
+        </div>
+  </section>
+  
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About <span>Me</span></h2>
+    <div class="about-img">
+      <img src="thabi.jpg" alt="Profile" class="round-image">
+    </div>
+    <div class="about-text">
+      <h3>Front-end Developer</h3>
+      <p>Hey there! I’m Thabo James Mosikidi — a web developer who believes every great idea deserves an equally great online home. I blend clean design, smart code, and a touch of creativity to build websites and apps that not only look amazing but actually do the job.</p>
+      <a href="about.html" class="glow-button"><span>Read More</span></a>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <h2 class="heading">Our <span>Services</span></h2>
+    
+    <div class="services-container">
+      <div class="services-box">
+        <i class='bx bx-code-alt'></i>
+        <h3>Web Development</h3>
+        <p>We design and develop modern, responsive websites and web applications that combine stunning visuals with
+          seamless functionality — tailored to bring your ideas to life and help your business grow.</p>
+        <a href="web-development.html" class="glow-button"><span>Read More</span></a>
+      </div>
+      
+      <div class="services-box">
+        <i class='bx bx-bar-chart-alt'></i>
+        <h3>Digital Marketing</h3>
+        <p>We craft modern, responsive websites and web solutions that blend sleek design with powerful functionality — built to elevate your brand, engage your audience, and drive growth..</p>
+        <a href="digital-marketing.html" class="glow-button"><span>Read More</span></a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Portfolio Section -->
+  <section class="portfolio" id="portfolio">
+    <h2 class="heading">My <span>Projects</span></h2>
+    
+    <div class="portfolio-container">
+      <div class="portfolio-box">
+        <img src="Thabo1.png" alt="">
+        <div class="portfolio-layer">
+          <h4>Lett Security Company</h4>
+          <p>Designed and developed by Thahbowh.dev — delivering modern, responsive, and user-friendly websites.</p>
+          <a href="https://thahbowh.github.io/Lett-Security-Academy/"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      
+      <div class="portfolio-box">
+        <img src="Thabo2.png" alt="">
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>Coming Soon...</p>
+          <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      
+      <div class="portfolio-box">
+        <img src="Thabo3.png" alt="">
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>Coming Soon...</p>
+          <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      
+      <div class="portfolio-box">
+        <img src="Thabo4.png" alt="">
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>Coming Soon...</p>
+          <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      
+      <div class="portfolio-box">
+        <img src="Thabo10.png" alt="">
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>Coming Soon...</p>
+          <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      
+      <div class="portfolio-box">
+        <img src="Thabo8.png" alt="">
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>Coming Soon...</p>
+          <a href="#"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+  <h2 class="heading">Contact <span>Me</span></h2>
+  <form id="contact-form">
+    <div class="input-box">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+    </div>
+    <div class="input-box">
+      <input type="tel" name="phone" placeholder="Mobile Number">
+      <input type="text" name="subject" placeholder="Email Subject">
+    </div>
+    <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+    <input type="submit" value="Send Message" class="btn">
+  </form>
+</section>
+
+<!--Emailjs  Script--->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function(){
+      emailjs.init("0a9qNv9xkc5U_1vKD"); // Replace with your EmailJS Public Key
+  })();
+
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevent form from refreshing
+
+    emailjs.sendForm("service_d2mly8k", "template_4fwl7d3", this)
+      .then(() => {
+          alert("Message sent successfully ✅");
+      }, (error) => {
+          console.log("EmailJS error:", error);
+alert("❌ Failed to send message. Check console for details.");
+      });
+});
+</script>
+
+
+  <!--footer design-->
+  <footer class="footer">
+    <div class="footer-text">
+      <p>Copyright &copy; 2025 by Thah.Bowh | All rights Reserved.</p>
+    </div>
+    
+    <div class="footer-iconTop">
+      <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+    </div>
+  </footer>
+  
+  </section>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menu-icon"); // <i id="menu-icon">
+      const navbar = document.getElementById("navbar"); // <nav id="navbar">
+      const navLinks = navbar ? navbar.querySelectorAll("a") : [];
+      
+      if (toggle && navbar) {
+        toggle.addEventListener("click", () => {
+          navbar.classList.toggle("active");
+        });
+      }
+      
+      navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          navbar.classList.remove("active");
+        });
+      });
+    });
+  </script>
+  
+  <!-- Navbar Toggle Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuBtn = document.querySelector(".menu-btn"); // example
+      if (menuBtn) {
+        menuBtn.addEventListener("click", () => {
+          console.log("Menu clicked!");
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Development | ThahBowh.dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ====== Base ====== */
+    :root{
+      --bg-color:#081b29;
+      --second-bg-color:#112e44;
+      --text-color:#ededed;
+      --muted:#b8c4cf;
+      --main-color:#00abf0; 
+      --card:#0b2236;
+      --ring:rgba(0,171,240,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background:radial-gradient(1200px 600px at 20% -10%, rgba(0,171,240,.15), transparent 60%),
+                 radial-gradient(1000px 500px at 110% 10%, rgba(0,171,240,.1), transparent 60%),
+                 var(--bg-color);
+      color:var(--text-color);
+      line-height:1.7;
+    }
+    a{color:inherit}
+    .container{width:min(1120px, 92%); margin-inline:auto}
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:40;
+      backdrop-filter:saturate(140%) blur(8px);
+      background:linear-gradient(180deg, rgba(8,27,41,.92), rgba(8,27,41,.75));
+      border-bottom:1px solid rgba(255,255,255,.05);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{font-weight:800; letter-spacing:.5px; font-size:1.25rem; color:var(--main-color)}
+    .nav a.btn{padding:.7rem 1rem; border:1px solid var(--ring); border-radius:12px; transition:.25s}
+    .nav a.btn:hover{box-shadow:0 0 0 3px var(--ring); transform:translateY(-1px)}
+
+    /* Hero */
+    .hero{padding:72px 0 36px}
+    .eyebrow{display:inline-flex; gap:.5rem; align-items:center; font-size:.85rem; color:var(--muted)}
+    .eyebrow .dot{width:8px; height:8px; border-radius:999px; background:var(--main-color); box-shadow:0 0 18px var(--main-color)}
+    h1{font-size:clamp(2rem, 3.6vw + 1rem, 3.5rem); line-height:1.1; margin:.6rem 0 1rem}
+    .lead{color:var(--muted); max-width:60ch}
+
+    /* Section */
+    .section{padding:48px 0}
+    .section h2{font-size:clamp(1.4rem, 1.1rem + 1.6vw, 2.2rem); margin:0 0 12px}
+    .section p.section-desc{color:var(--muted); margin:0 0 24px; max-width:70ch}
+
+    /* Cards */
+    .grid{display:grid; gap:22px}
+    @media (min-width:760px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}.grid.cols-2{grid-template-columns:repeat(2,1fr)}}
+
+    .card{
+      position:relative; border-radius:20px; padding:22px; background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      border:1px solid rgba(255,255,255,.06);
+      overflow:hidden; isolation:isolate;
+    }
+    .card h3{margin:.25rem 0 6px}
+    .card p{color:var(--muted)}
+
+    .kicker{font-size:.8rem; color:var(--main-color); letter-spacing:.2em; text-transform:uppercase}
+
+    /* Pricing */
+    .price{font-size:2rem; font-weight:800}
+    .muted{color:var(--muted)}
+    .list{list-style:none; padding:0; margin:12px 0 0}
+    .list li{display:flex; gap:.6rem; align-items:flex-start; padding:.35rem 0}
+    .tick{flex:0 0 18px; width:18px; height:18px; border:1px solid var(--ring); border-radius:6px; display:grid; place-items:center}
+
+    /* Buttons */
+    .btn-primary{display:inline-block; margin-top:12px; background:var(--main-color); color:#00141d; font-weight:700; border-radius:12px; padding:.8rem 1.1rem; border:0; text-decoration:none; box-shadow:0 12px 30px rgba(0,171,240,.22); transition:transform .2s, box-shadow .2s}
+    .btn-primary:hover{transform:translateY(-1px); box-shadow:0 16px 40px rgba(0,171,240,.3)}
+
+    /* FAQ */
+    details{border:1px solid rgba(255,255,255,.06); border-radius:14px; padding:14px 16px; background:rgba(255,255,255,.02)}
+    details+details{margin-top:10px}
+    summary{cursor:pointer; font-weight:600}
+    summary::-webkit-details-marker{display:none}
+
+    /* Footer */
+    footer {
+      text-align:center; padding:2rem 9%; background: var(--second-bg-color); font-size:.9rem; color:var(--muted)
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">ThahBowh.dev</a>
+      <nav>
+        <a class="btn" href="#contact">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow"><span class="dot"></span><span>Services</span></div>
+      <h1>Web Development</h1>
+      <p class="lead">Modern, responsive, and scalable websites built with clean code, optimized performance, and user-friendly design.</p>
+      <a href="#pricing" class="btn-primary">View Packages</a>
+    </div>
+  </section>
+
+  <!-- What you get -->
+  <section class="section">
+    <div class="container">
+      <h2>What you get</h2>
+      <p class="section-desc">We design and develop web solutions that don’t just look good — they deliver measurable results for your business.</p>
+
+      <div class="grid cols-3">
+        <article class="card">
+          <div class="kicker">Design</div>
+          <h3>Modern UI/UX</h3>
+          <p>Clean, responsive, and user-friendly interfaces tailored to your brand identity.</p>
+        </article>
+        <article class="card">
+          <div class="kicker">Development</div>
+          <h3>Custom Solutions</h3>
+          <p>Websites and apps built with HTML, CSS, JavaScript, Django, and PHP for full flexibility.</p>
+        </article>
+        <article class="card">
+          <div class="kicker">Performance</div>
+          <h3>Fast & Secure</h3>
+          <p>Optimized for speed, SEO-friendly, and built with security best practices.</p>
+        </article>
+        <article class="card">
+          <div class="kicker">E-commerce</div>
+          <h3>Online Stores</h3>
+          <p>Powerful shopping solutions with payment gateways, inventory management, and analytics.</p>
+        </article>
+        <article class="card">
+          <div class="kicker">CMS</div>
+          <h3>Easy Updates</h3>
+          <p>Content management systems so you can edit, add, and publish content with ease.</p>
+        </article>
+        <article class="card">
+          <div class="kicker">Support</div>
+          <h3>Ongoing Maintenance</h3>
+          <p>Bug fixes, updates, and technical support to keep your site running smoothly.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <h2>Packages</h2>
+      <p class="section-desc">Flexible pricing plans for startups, small businesses, and enterprises.</p>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <div class="kicker">Starter</div>
+          <h3>Basic Website from</h3>
+          <div class="price">R1,500</div>
+          <p class="muted">Perfect for personal or small business sites</p>
+          <ul class="list">
+            <li><span class="tick">✓</span><span>3 pages (Home, About, Contact)</span></li>
+            <li><span class="tick">✓</span><span>Responsive design</span></li>
+            <li><span class="tick">✓</span><span>Basic SEO setup</span></li>
+          </ul>
+          <a href="#contact" class="btn-primary">Get started</a>
+        </div>
+
+        <div class="card">
+          <div class="kicker">Popular</div>
+          <h3>Business Site from</h3>
+          <div class="price">R3,500</div>
+          <p class="muted">Great for growing businesses</p>
+          <ul class="list">
+            <li><span class="tick">✓</span><span>Up to 8 pages</span></li>
+            <li><span class="tick">✓</span><span>Blog/News section</span></li>
+            <li><span class="tick">✓</span><span>Contact forms + WhatsApp integration</span></li>
+          </ul>
+          <a href="#contact" class="btn-primary">Choose Business</a>
+        </div>
+
+        <div class="card">
+          <div class="kicker">Custom</div>
+          <h3>Advanced Solutions</h3>
+          <div class="price">Quote</div>
+          <p class="muted">Tailored for large projects</p>
+          <ul class="list">
+            <li><span class="tick">✓</span><span>E-commerce integration</span></li>
+            <li><span class="tick">✓</span><span>Custom API & backend</span></li>
+            <li><span class="tick">✓</span><span>Ongoing technical support</span></li>
+          </ul>
+          <a href="#contact" class="btn-primary">Request a quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <h2>FAQs</h2>
+      <details>
+        <summary>How long does it take to build a website?</summary>
+        <p class="muted">Basic websites can be completed in 1–3 weeks, while advanced sites may take 4–9 weeks depending on features.</p>
+      </details>
+      <details>
+        <summary>Will my website work on mobile devices?</summary>
+        <p class="muted">Yes, all websites are fully responsive and optimized for mobile, tablet, and desktop screens.</p>
+      </details>
+      <details>
+        <summary>Can I request custom features?</summary>
+        <p class="muted">Absolutely. We build custom solutions to match your exact needs and business goals.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="card" style="text-align:center; padding:28px">
+        <h2>Let’s build your website</h2>
+        <p class="section-desc">From idea to launch, we’ll bring your vision to life. Get in touch today.</p>
+        <a href="https://wa.me/+27750918076" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" class="btn-primary">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="y"></span> ThahBowh.dev | Web Development Services</p>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
